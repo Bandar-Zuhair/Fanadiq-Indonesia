@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+/* Simple Animation SetUp For Later Use */
+@keyframes floatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Change the background color and text color of highlighted text */
+::selection {
+    background-color: rgb(0, 115, 182);
+    /* Background color */
+    color: white;
+    /* Text color */
+}
+
+
+/* All */
+* {
+    font-family: 'Readex Pro', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    direction: rtl;
+    user-select: none;
+}
+
+/* Body */
+body {
+    background: rgb(215, 232, 244);
+    color: white;
+}
+
+
+
+/* Unknow Effects */
+.fanadiqindonesia_full_screen_guidance_overlay {
+    background: rgb(215, 232, 244);
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    z-index: 997;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fanadiqindonesia_full_screen_overlay_exit_button {
+    z-index: 998;
+    text-decoration: none;
+    background: black;
+    color: white;
+    width: fit-content;
+    font-size: 2vw;
+    padding: 8px 16px;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: all 0.2s ease-in-out;
+}
+
+.fanadiqindonesia_full_screen_overlay_exit_button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.015);
+}
+
+.fanadiqindonesia_full_screen_img_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(157, 203, 236);
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fanadiqindonesia_big_img {
+    width: 100%;
+    /* Set width to 100% */
+    height: 100%;
+    /* Set height to 100% */
+    object-fit: contain;
+    /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+/* Header */
+header {
+    background: rgb(215, 232, 244);
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#fanadiqindonesia_web_logo {
+    width: 70Vw;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 3px 0.5px black;
+    animation: floatAnimation 4s ease-in-out infinite;
+}
+
+.fanadiqindonesia_web_intro {
+    color: rgb(0, 162, 255);
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+#fanadiqindonesia_web_intro_1 {
+    color: black;
+    font-size: 1vw;
+}
+
+#fanadiqindonesia_web_intro_2 {
+    color: rgb(0, 162, 255);
+    font-size: 3vw;
+    animation: floatAnimation 4s ease-in-out infinite;
+}
+
+#fanadiqindonesia_error_web_intro_1 {
+    color: black;
+    font-size: 2vw;
+}
+
+#fanadiqindonesia_error_web_intro_2 {
+    color: rgb(0, 162, 255);
+    font-size: 2.5vw;
+}
+
+#fanadiqindonesia_website_guidance_text {
+    background: rgb(0, 162, 255);
+    margin: 5px 0;
+    font-size: 2vw;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 18px;
+    box-shadow: 0 0 3px 0.5px black;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#fanadiqindonesia_website_guidance_text:hover {
+    color: rgb(0, 255, 0);
+    transform: scale(1.015);
+}
+
+#fanadiqindonesia_error_page_go_back_button {
+    background: black;
+    color: white;
+    margin: 5px 0;
+    padding: 10px 18px;
+    font-size: 2vw;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#fanadiqindonesia_error_page_go_back_button:hover {
+    color: rgb(0, 255, 0);
+    transform: scale(1.015);
+}
+
+.web_guidance_div {
+    z-index: 998;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(157, 203, 236);
+    width: 90%;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 7px;
+    box-shadow: 0 0 3px 0.5px black;
+}
+
+.web_guidance_div a {
+    text-decoration: none;
+    background: black;
+    color: white;
+    font-size: 2.5vw;
+    line-height: 1.5;
+    text-align: center;
+    margin: 5px 0;
+    padding: 8px 10px;
+    border: 1px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.web_guidance_div a:hover {
+    color: rgb(0, 255, 0);
+    transform: scale(1.015);
+}
+
+#fanadiqindonesia_whatsapp_icon {
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 80px;
+    left: 5px;
+    animation: floatAnimation 4s ease-in-out infinite;
+}
+
+#fanadiqindonesia_whatsapp_icon h4 {
+    background: rgb(0, 162, 255);
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 5px 10px;
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: 0 0 3px 0.5px black;
+    transition: all 0.2s ease-in-out;
+}
+
+#fanadiqindonesia_whatsapp_icon img {
+    width: 5vw;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+#fanadiqindonesia_whatsapp_icon h4:hover,
+#fanadiqindonesia_whatsapp_icon img:hover {
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Choose Hotel Location Cards Section */
+#fanadiqindonesia_pdf_file_div {
+    background: rgb(157, 203, 236);
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-shadow: 0 0 3px 0.5px black;
+}
+
+
+
+
+
+
+
+
+
+
+/* Choose Hotel Location Cards Section */
+.fanadiqindonesia_sections {
+    background: rgb(215, 232, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.fanadiqindonesia_section_title_text_div {
+    width: 100%;
+}
+
+.fanadiqindonesia_section_title_text {
+    background: rgb(131, 0, 148);
+    width: 100%;
+    font-size: 3vw;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 0 3px 0.5px black;
+    border-radius: 7px;
+    line-height: 1.5;
+}
+
+.fanadiqindonesia_cards_area_div_class {
+    background: rgb(157, 203, 236);
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0 60px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-shadow: 0 0 3px 0.5px black;
+}
+
+/* Hide vertical scrollbar */
+.fanadiqindonesia_cards_area_div_class::-webkit-scrollbar {
+    display: none;
+}
+
+.fanadiqindonesia_hotel_info_div {
+    background: rgb(0, 162, 255);
+    min-width: 25vw;
+    width: 25vw;
+    margin: 0 5px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0 0 3px 0.5px black;
+    transition: all 0.2s ease-in-out;
+}
+
+.fanadiqindonesia_hotel_info_div:hover {
+    transform: scale(1.015);
+    box-shadow: 0 0 3px 0.5px rgb(0, 255, 0);
+}
+
+.fanadiqindonesia_hotel_location_img_div img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.fanadiqindonesia_hotel_location_text_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fanadiqindonesia_hotel_location_text_div h2 {
+    font-size: 2vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Choose Hotel Cards Section */
+#fanadiqindonesia_choose_hotel_div {
+    background: rgb(157, 203, 236);
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0 60px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-shadow: 0 0 3px 0.5px black;
+}
+
+/* Hide vertical scrollbar */
+#fanadiqindonesia_choose_hotel_div::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Section */
+footer {
+    background: rgb(0, 162, 255);
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 0 3px 0.5px black;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1,
+footer h2 {
+    font-size: 2vw;
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: center;
+}
+
+footer img {
+    width: 10vw;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+/* 1250px */
+@media(max-width:1250px) {
+    footer h1 {
+        font-size: 3vw;
+    }
+
+    footer img {
+        width: 12vw;
+    }
+}
+
+/* 1040px */
+@media(max-width:1040px) {
+    #fanadiqindonesia_whatsapp_icon h4 {
+        font-size: 2vw;
+    }
+
+    #fanadiqindonesia_whatsapp_icon img {
+        width: 7vw;
+    }
+}
+
+/* 950px */
+@media(max-width:950px) {
+    .fanadiqindonesia_full_screen_overlay_exit_button {
+        font-size: 3vw;
+        padding: 10px;
+    }
+
+    #fanadiqindonesia_web_intro_1 {
+        font-size: 2vw;
+    }
+
+    .fanadiqindonesia_hotel_info_div {
+        min-width: 35vw;
+        width: 35vw;
+    }
+
+    .fanadiqindonesia_hotel_location_text_div h2 {
+        font-size: 3vw;
+    }
+}
+
+/* 850px */
+@media(max-width:850px) {
+    #fanadiqindonesia_error_page_go_back_button {
+        font-size: 4vw;
+        padding: 8px 14px;
+    }
+
+    #fanadiqindonesia_website_guidance_text {
+        font-size: 4vw;
+        padding: 8px 14px;
+    }
+
+    .fanadiqindonesia_sections {
+        padding: 30px 0;
+    }
+}
+
+/* 760px */
+@media(max-width:760px) {
+    #fanadiqindonesia_web_logo {
+        width: 100Vw;
+    }
+
+    #fanadiqindonesia_whatsapp_icon h4 {
+        font-size: 2.5vw;
+    }
+
+    #fanadiqindonesia_whatsapp_icon img {
+        width: 9vw;
+    }
+
+    .fanadiqindonesia_section_title_text {
+        font-size: 4vw;
+        padding: 8px 14px;
+    }
+
+    #fanadiqindonesia_web_intro_2 {
+        font-size: 5vw;
+    }
+
+    #fanadiqindonesia_error_web_intro_1 {
+        font-size: 3.5vw;
+    }
+
+    #fanadiqindonesia_error_web_intro_2 {
+        font-size: 4vw;
+    }
+
+    footer h1 {
+        font-size: 4vw;
+    }
+
+    footer img {
+        width: 14vw;
+    }
+}
+
+/* 650px */
+@media(max-width:650px) {
+    .fanadiqindonesia_full_screen_overlay_exit_button {
+        font-size: 4vw;
+        padding: 8px;
+    }
+
+    #fanadiqindonesia_website_guidance_text {
+        font-size: 4.5vw;
+        padding: 8px;
+    }
+
+    .web_guidance_div a {
+        font-size: 3.5vw;
+        padding: 8px;
+    }
+
+    .fanadiqindonesia_sections {
+        padding: 20px 0;
+    }
+
+    #fanadiqindonesia_cards_area_div_class {
+        padding: 10px 0 40px;
+    }
+}
+
+
+/* 580px */
+@media(max-width:580px) {
+
+    #fanadiqindonesia_error_page_go_back_button {
+        font-size: 5vw;
+        padding: 8px;
+    }
+}
+
+/* 500px */
+@media(max-width:500px) {
+    #fanadiqindonesia_whatsapp_icon h4 {
+        font-size: 3vw;
+        padding: 4px 8px;
+    }
+
+    #fanadiqindonesia_whatsapp_icon img {
+        width: 11vw;
+    }
+
+    #fanadiqindonesia_web_intro_1 {
+        font-size: 3vw;
+    }
+
+    #fanadiqindonesia_web_intro_2 {
+        font-size: 6vw;
+    }
+
+    .fanadiqindonesia_section_title_text {
+        font-size: 5vw;
+        padding: 8px;
+    }
+
+    .fanadiqindonesia_hotel_info_div {
+        min-width: 40vw;
+        width: 40vw;
+    }
+
+    .fanadiqindonesia_hotel_location_text_div h2 {
+        font-size: 4vw;
+    }
+
+    .fanadiqindonesia_sections {
+        padding: 15px 0;
+    }
+
+    .fanadiqindonesia_cards_area_div_class {
+        padding: 10px 0 30px;
+    }
+    
+    footer {
+        padding: 5px 0;
+    }
+
+    footer img {
+        width: 17vw;
+    }
+}
+
+/* 400px */
+@media(max-width:400px) {
+    .fanadiqindonesia_full_screen_overlay_exit_button {
+        font-size: 5vw;
+        padding: 6px;
+    }
+
+    #fanadiqindonesia_website_guidance_text {
+        font-size: 5vw;
+        padding: 6px;
+    }
+
+    .web_guidance_div a {
+        font-size: 4vw;
+        padding: 6px;
+    }
+}
+
+/* 320px */
+@media(max-width:320px) {
+    .fanadiqindonesia_full_screen_overlay_exit_button {
+        font-size: 10px;
+    }
+
+    #fanadiqindonesia_web_intro_2 {
+        font-size: 7vw;
+    }
+
+    .fanadiqindonesia_section_title_text {
+        font-size: 6vw;
+        padding: 6px;
+    }
+
+    .fanadiqindonesia_sections {
+        padding: 10px 0;
+    }
+
+    .fanadiqindonesia_cards_area_div_class {
+        padding: 10px 0 25px;
+    }
+
+    footer {
+        padding: 3px 0;
+    }
+
+    footer h1 {
+        font-size: 5vw;
+    }
+
+    footer img {
+        width: 20vw;
+    }
+}
