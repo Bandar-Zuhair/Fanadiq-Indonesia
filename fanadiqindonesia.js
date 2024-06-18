@@ -155,55 +155,55 @@ function fanadiqindonesia_websiteGuidance() {
 
 
 
-if(document.getElementById('fanadiqindonesia_choose_pdf_file_section')){
+if (document.getElementById('fanadiqindonesia_choose_pdf_file_section')) {
 
-// Function to add horizontal scrolling functionality
-function addHorizontalScrolling(container) {
-    container.addEventListener('mousedown', function (event) {
-        if (event.button === 0) { // Check if left mouse button is clicked
-            this.classList.add('grabbing'); // Add grabbing cursor style
-            this.dataset.scrollX = this.scrollLeft; // Store initial scrollLeft position
-            this.dataset.clientX = event.clientX; // Store initial clientX position
+    // Function to add horizontal scrolling functionality
+    function addHorizontalScrolling(container) {
+        container.addEventListener('mousedown', function (event) {
+            if (event.button === 0) { // Check if left mouse button is clicked
+                this.classList.add('grabbing'); // Add grabbing cursor style
+                this.dataset.scrollX = this.scrollLeft; // Store initial scrollLeft position
+                this.dataset.clientX = event.clientX; // Store initial clientX position
 
-            let onMouseMove = function (event) {
-                let deltaX = event.clientX - parseInt(this.dataset.clientX); // Calculate delta X
-                this.scrollLeft = parseInt(this.dataset.scrollX) - deltaX; // Adjust scrollLeft position
-            }.bind(this);
+                let onMouseMove = function (event) {
+                    let deltaX = event.clientX - parseInt(this.dataset.clientX); // Calculate delta X
+                    this.scrollLeft = parseInt(this.dataset.scrollX) - deltaX; // Adjust scrollLeft position
+                }.bind(this);
 
-            let onMouseUp = function () {
-                this.classList.remove('grabbing'); // Remove grabbing cursor style
-                window.removeEventListener('mousemove', onMouseMove); // Remove event listeners
-                window.removeEventListener('mouseup', onMouseUp);
-            }.bind(this);
+                let onMouseUp = function () {
+                    this.classList.remove('grabbing'); // Remove grabbing cursor style
+                    window.removeEventListener('mousemove', onMouseMove); // Remove event listeners
+                    window.removeEventListener('mouseup', onMouseUp);
+                }.bind(this);
 
-            window.addEventListener('mousemove', onMouseMove); // Listen for mouse movement
-            window.addEventListener('mouseup', onMouseUp); // Listen for mouse release
-        }
-    });
-}
+                window.addEventListener('mousemove', onMouseMove); // Listen for mouse movement
+                window.addEventListener('mouseup', onMouseUp); // Listen for mouse release
+            }
+        });
+    }
 
-/* Function To Show Hotel Location Section For Showing Close Sale Data */
-showHotelCloseSaleDataFunction = function(){
+    /* Function To Show Hotel Location Section For Showing Close Sale Data */
+    showHotelCloseSaleDataFunction = function () {
 
-    document.getElementById('fanadiqindonesia_choose_hotel_location_section').style.display = 'flex';
+        document.getElementById('fanadiqindonesia_choose_hotel_location_section').style.display = 'flex';
 
-     /* Scroll Down To The 'fanadiqindonesia_choose_hotel_location_section' Element */
-     setTimeout(() => {
-        document.getElementById('fanadiqindonesia_choose_hotel_location_section').scrollIntoView({ block: 'center', behavior: 'smooth' });
-    }, 100);
-}
+        /* Scroll Down To The 'fanadiqindonesia_choose_hotel_location_section' Element */
+        setTimeout(() => {
+            document.getElementById('fanadiqindonesia_choose_hotel_location_section').scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }, 100);
+    }
 
 
-// Loop through the array to create location cards
-fanadiqindonesia_hotelLocationArray.forEach((item) => {
-    let { locationImgSrc, hotelLocationName, locationArrayName } = item;
+    // Loop through the array to create location cards
+    fanadiqindonesia_hotelLocationArray.forEach((item) => {
+        let { locationImgSrc, hotelLocationName, locationArrayName } = item;
 
-    /* Create The Container Div With The Content */
-    let hotelLocationInfoDiv = document.createElement("div");
-    hotelLocationInfoDiv.classList.add("fanadiqindonesia_hotel_info_div");
-    hotelLocationInfoDiv.onclick = () => { fanadiqindonesia_createHotelAreaCardsFunction(locationArrayName, hotelLocationName) };
+        /* Create The Container Div With The Content */
+        let hotelLocationInfoDiv = document.createElement("div");
+        hotelLocationInfoDiv.classList.add("fanadiqindonesia_hotel_info_div");
+        hotelLocationInfoDiv.onclick = () => { fanadiqindonesia_createHotelAreaCardsFunction(locationArrayName, hotelLocationName) };
 
-    hotelLocationInfoDiv.innerHTML = `
+        hotelLocationInfoDiv.innerHTML = `
             <div class="fanadiqindonesia_hotel_location_img_div">
                 <img src='${locationImgSrc}' alt="فنادق اندونيسيا">
             </div>
@@ -212,39 +212,39 @@ fanadiqindonesia_hotelLocationArray.forEach((item) => {
             </div>
         `;
 
-    // Append the 'hotelLocationInfoDiv' to the 'fanadiqindonesia_choose_hotel_location_div'
-    document.getElementById('fanadiqindonesia_choose_hotel_location_div').appendChild(hotelLocationInfoDiv);
-});
+        // Append the 'hotelLocationInfoDiv' to the 'fanadiqindonesia_choose_hotel_location_div'
+        document.getElementById('fanadiqindonesia_choose_hotel_location_div').appendChild(hotelLocationInfoDiv);
+    });
 
-// Add horizontal scrolling functionality to location div
-addHorizontalScrolling(document.getElementById('fanadiqindonesia_choose_hotel_location_div'));
+    // Add horizontal scrolling functionality to location div
+    addHorizontalScrolling(document.getElementById('fanadiqindonesia_choose_hotel_location_div'));
 
 
-/* Function For Creating The Hotel Area Cards */
-fanadiqindonesia_createHotelAreaCardsFunction = function (hotelLocationArrayName, hotelAreaName) {
+    /* Function For Creating The Hotel Area Cards */
+    fanadiqindonesia_createHotelAreaCardsFunction = function (hotelLocationArrayName, hotelAreaName) {
 
-    let hotelLocationArrays = {
-        'fanadiqindonesia_baliHotelArray': fanadiqindonesia_baliHotelArray,
-        'fanadiqindonesia_jakartaHotelArray': fanadiqindonesia_jakartaHotelArray,
-        'fanadiqindonesia_puncakHotelArray': fanadiqindonesia_puncakHotelArray,
-        'fanadiqindonesia_bandungHotelArray': fanadiqindonesia_bandungHotelArray
-    };
+        let hotelLocationArrays = {
+            'fanadiqindonesia_baliHotelArray': fanadiqindonesia_baliHotelArray,
+            'fanadiqindonesia_jakartaHotelArray': fanadiqindonesia_jakartaHotelArray,
+            'fanadiqindonesia_puncakHotelArray': fanadiqindonesia_puncakHotelArray,
+            'fanadiqindonesia_bandungHotelArray': fanadiqindonesia_bandungHotelArray
+        };
 
-    document.getElementById('fanadiqindonesia_choose_hotel_area_div').innerHTML = '';
+        document.getElementById('fanadiqindonesia_choose_hotel_area_div').innerHTML = '';
 
-    // Set the title for the hotel area section
-    document.getElementById('fanadiqindonesia_choose_hotel_area_title').innerText = `اختار المنطقة في ${hotelAreaName}`;
+        // Set the title for the hotel area section
+        document.getElementById('fanadiqindonesia_choose_hotel_area_title').innerText = `اختار المنطقة في ${hotelAreaName}`;
 
-    if (hotelLocationArrays[hotelLocationArrayName]) {
-        hotelLocationArrays[hotelLocationArrayName].forEach((item) => {
-            let { hotelAreaImgSrc, hotelAreaName, hotelPdfNameArray } = item;
+        if (hotelLocationArrays[hotelLocationArrayName]) {
+            hotelLocationArrays[hotelLocationArrayName].forEach((item) => {
+                let { hotelAreaImgSrc, hotelAreaName, hotelPdfNameArray } = item;
 
-            /* Create The Container Div With The Content */
-            let hotelAreaInfoDiv = document.createElement("div");
-            hotelAreaInfoDiv.classList.add("fanadiqindonesia_hotel_info_div");
-            hotelAreaInfoDiv.onclick = () => { fanadiqindonesia_createHotelCardsFunction(hotelPdfNameArray) };
+                /* Create The Container Div With The Content */
+                let hotelAreaInfoDiv = document.createElement("div");
+                hotelAreaInfoDiv.classList.add("fanadiqindonesia_hotel_info_div");
+                hotelAreaInfoDiv.onclick = () => { fanadiqindonesia_createHotelCardsFunction(hotelPdfNameArray) };
 
-            hotelAreaInfoDiv.innerHTML = `
+                hotelAreaInfoDiv.innerHTML = `
                     <div class="fanadiqindonesia_hotel_location_img_div">
                         <img src='${hotelAreaImgSrc}' alt="فنادق اندونيسيا">
                     </div>
@@ -253,31 +253,39 @@ fanadiqindonesia_createHotelAreaCardsFunction = function (hotelLocationArrayName
                     </div>
                 `;
 
-            // Append the 'hotelAreaInfoDiv' to the 'fanadiqindonesia_choose_hotel_area_div'
-            document.getElementById('fanadiqindonesia_choose_hotel_area_div').appendChild(hotelAreaInfoDiv);
-        });
+                // Append the 'hotelAreaInfoDiv' to the 'fanadiqindonesia_choose_hotel_area_div'
+                document.getElementById('fanadiqindonesia_choose_hotel_area_div').appendChild(hotelAreaInfoDiv);
+            });
+        }
+
+        // Add horizontal scrolling functionality to area div
+        addHorizontalScrolling(document.getElementById('fanadiqindonesia_choose_hotel_area_div'));
+
+        if (fanadiqindonesia_choose_hotel_area_section.style.display === 'none') {
+            fanadiqindonesia_choose_hotel_area_section.style.display = 'flex';
+        }
+
+        /* Scroll Down To The 'fanadiqindonesia_choose_hotel_area_div' Element */
+        setTimeout(() => {
+            document.getElementById('fanadiqindonesia_choose_hotel_area_div').scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }, 100);
+    };
+
+
+    fanadiqindonesia_createHotelCardsFunction = function (pdfName) {
+        // Create a new window or tab with an iframe to display the PDF
+        const pdfUrl = `hotel-pdf/hotel-stope-sale/${pdfName}`;
+        const newWindow = window.open();
+        newWindow.document.write(`
+            <html>
+            <head><title>Hotel Area Card</title></head>
+            <body style="margin:0;">
+                <iframe src="${pdfUrl}" style="width:100%; height:100%;" frameborder="0"></iframe>
+            </body>
+            </html>
+        `);
+        newWindow.document.close();
     }
-
-    // Add horizontal scrolling functionality to area div
-    addHorizontalScrolling(document.getElementById('fanadiqindonesia_choose_hotel_area_div'));
-
-    if (fanadiqindonesia_choose_hotel_area_section.style.display === 'none') {
-        fanadiqindonesia_choose_hotel_area_section.style.display = 'flex';
-    }
-
-    /* Scroll Down To The 'fanadiqindonesia_choose_hotel_area_div' Element */
-    setTimeout(() => {
-        document.getElementById('fanadiqindonesia_choose_hotel_area_div').scrollIntoView({ block: 'center', behavior: 'smooth' });
-    }, 100);
-};
-
-
-/* Function To Show Each Hotel Area Card PDF File Fore The Colse Sale Data */
-fanadiqindonesia_createHotelCardsFunction = function(pdfName){
-
-    window.open(`hotel-pdf/hotel-stope-sale/${pdfName}`)
-
-}
 
 }
 
