@@ -117,9 +117,7 @@ function fanadiqindonesia_websiteGuidance() {
     webGuidanceDiv.classList.add('web_guidance_div');
 
     let webGuidanceText = `
-        <a itemprop="url" href="https://fanadiqindonesia.com">1- في الصفحة الرئيسية اختار نوع العمالة الاندونيسية.</a>
-        <a itemprop="url" title="اسعار الاستقدام من اندونيسيا - اندو للجميع" href="https://fanadiqindonesia.com/%D8%A7%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%AF%D8%A7%D9%85-%D9%85%D9%86-%D8%A7%D9%86%D8%AF%D9%88%D9%86%D9%8A%D8%B3%D9%8A%D8%A7">2- بعد اختيار نوع العمالة، خذ نظرة على اسعار الاستقدام ومدة إنجاز العمل.</a>
-        <a onclick="fanadiqindonesia_whatsApp()">3- اخيرا، تواصل معنا لطلب الاستقدام او للمزيد من المعلومات والنصائح.</a>
+        <h2>1- الموقع سهل وبسيط مايحتاج شرح.</h2>
     `;
 
     // Append All The elements inside 'FullScreenGuidanceOverlay'
@@ -139,12 +137,6 @@ function fanadiqindonesia_websiteGuidance() {
         if (document.body.contains(FullScreenGuidanceOverlay)) {
             document.body.removeChild(FullScreenGuidanceOverlay);
         }
-
-        // Scroll Back The 'fanadiqindonesia_nav' Element After Exiting The Website Guidance Page
-        fanadiqindonesia_nav.scrollIntoView({
-            block: 'center',
-            inline: 'center',
-        });
     }
 }
 
