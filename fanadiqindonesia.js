@@ -272,19 +272,11 @@ if (document.getElementById('fanadiqindonesia_choose_pdf_file_section')) {
     };
 
 
+    /* Function To Show Each Hotel Area Card PDF File Fore The Colse Sale Data */
     fanadiqindonesia_createHotelCardsFunction = function (pdfName) {
-        // Create a new window or tab with an iframe to display the PDF
-        const pdfUrl = `hotel-pdf/hotel-stope-sale/${pdfName}`;
-        const newWindow = window.open();
-        newWindow.document.write(`
-            <html>
-            <head><title>Hotel Area Card</title></head>
-            <body style="margin:0;">
-                <iframe src="${pdfUrl}" style="width:100%; height:100%;" frameborder="0"></iframe>
-            </body>
-            </html>
-        `);
-        newWindow.document.close();
+
+        window.open(`hotel-pdf/hotel-stope-sale/${pdfName}`)
+
     }
 
 }
