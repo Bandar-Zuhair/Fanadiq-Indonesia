@@ -230,63 +230,24 @@ header div {
     box-shadow: 0 0 3px 0.5px black;
 }
 
-.web_guidance_div a {
-    text-decoration: none;
+.web_guidance_div h2 {
     background: black;
     color: white;
     font-size: 2.5vw;
-    line-height: 1.5;
-    text-align: center;
     margin: 5px 0;
     padding: 8px 10px;
+    line-height: 1.5;
+    text-align: center;
     border: 1px solid white;
     border-radius: 7px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
-.web_guidance_div a:hover {
+.web_guidance_div h2:hover {
     color: rgb(0, 255, 0);
     transform: scale(1.015);
 }
-
-#fanadiqindonesia_whatsapp_icon {
-    z-index: 998;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    bottom: 80px;
-    left: 5px;
-    animation: floatAnimation 4s ease-in-out infinite;
-}
-
-#fanadiqindonesia_whatsapp_icon h4 {
-    background: rgb(0, 162, 255);
-    color: white;
-    font-size: 1.5vw;
-    text-align: center;
-    padding: 5px 10px;
-    width: fit-content;
-    cursor: pointer;
-    border-radius: 7px;
-    box-shadow: 0 0 3px 0.5px black;
-    transition: all 0.2s ease-in-out;
-}
-
-#fanadiqindonesia_whatsapp_icon img {
-    width: 5vw;
-    padding: 5px;
-    cursor: pointer;
-
-}
-
-#fanadiqindonesia_whatsapp_icon h4:hover,
-#fanadiqindonesia_whatsapp_icon img:hover {
-    opacity: 0.5;
-}
-
-
 
 
 
@@ -496,13 +457,7 @@ footer img {
 
 /* 1040px */
 @media(max-width:1040px) {
-    #fanadiqindonesia_whatsapp_icon h4 {
-        font-size: 2vw;
-    }
 
-    #fanadiqindonesia_whatsapp_icon img {
-        width: 7vw;
-    }
 }
 
 /* 950px */
@@ -549,14 +504,6 @@ footer img {
         width: 100Vw;
     }
 
-    #fanadiqindonesia_whatsapp_icon h4 {
-        font-size: 2.5vw;
-    }
-
-    #fanadiqindonesia_whatsapp_icon img {
-        width: 9vw;
-    }
-
     .fanadiqindonesia_section_title_text {
         font-size: 4vw;
         padding: 8px 14px;
@@ -595,7 +542,7 @@ footer img {
         padding: 8px;
     }
 
-    .web_guidance_div a {
+    .web_guidance_div h2 {
         font-size: 3.5vw;
         padding: 8px;
     }
@@ -621,15 +568,6 @@ footer img {
 
 /* 500px */
 @media(max-width:500px) {
-    #fanadiqindonesia_whatsapp_icon h4 {
-        font-size: 3vw;
-        padding: 4px 8px;
-    }
-
-    #fanadiqindonesia_whatsapp_icon img {
-        width: 11vw;
-    }
-
     #fanadiqindonesia_web_intro_1 {
         font-size: 3vw;
     }
@@ -681,7 +619,7 @@ footer img {
         padding: 6px;
     }
 
-    .web_guidance_div a {
+    .web_guidance_div h2 {
         font-size: 4vw;
         padding: 6px;
     }
