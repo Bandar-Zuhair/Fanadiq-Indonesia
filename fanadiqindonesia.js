@@ -154,7 +154,7 @@ function fanadiqindonesia_websiteGuidance() {
 
 
 
-
+/* All The System Code is Here */
 if (document.getElementById('fanadiqindonesia_choose_pdf_file_section')) {
 
     // Function to add horizontal scrolling functionality
@@ -182,9 +182,31 @@ if (document.getElementById('fanadiqindonesia_choose_pdf_file_section')) {
         });
     }
 
-    /* Function To Show Hotel Location Section For Showing Close Sale Data */
-    showHotelCloseSaleDataFunction = function () {
 
+    /* Function To Open Allotment File */
+    showHotelAllotmentDataFunction = function () {
+
+        /* Hide And Show Different Sections Based on What Card Got Clicked */
+        document.getElementById('fanadiqindonesia_choose_paid_rooms_hotel_file_section').style.display = 'none';
+        document.getElementById('fanadiqindonesia_choose_hotel_location_section').style.display = 'none';
+
+        /* Change Other Clicked Cards Background Color */
+        fanadiqindonesia_paid_rooms_card_id.style.backgroundColor = 'rgb(0, 162, 255)';
+        fanadiqindonesia_close_sale_card_id.style.backgroundColor = 'rgb(0, 162, 255)';
+
+        /* Open Allotment PDF File */
+        window.open('hotel-pdf/allotment/allotment.pdf')
+    }
+
+    /* Function To Show Hotel Location Section For Showing Close Sale Data */
+    showHotelCloseSaleDataFunction = function (clickedElement) {
+
+        /* Chnage Clicked Card Background Color */
+        clickedElement.style.backgroundColor = 'rgb(0, 255, 0)';
+        fanadiqindonesia_paid_rooms_card_id.style.backgroundColor = 'rgb(0, 162, 255)';
+
+        /* Hide And Show Different Sections Based on What Card Got Clicked */
+        document.getElementById('fanadiqindonesia_choose_paid_rooms_hotel_file_section').style.display = 'none';
         document.getElementById('fanadiqindonesia_choose_hotel_location_section').style.display = 'flex';
 
         /* Scroll Down To The 'fanadiqindonesia_choose_hotel_location_section' Element */
@@ -192,6 +214,30 @@ if (document.getElementById('fanadiqindonesia_choose_pdf_file_section')) {
             document.getElementById('fanadiqindonesia_choose_hotel_location_section').scrollIntoView({ block: 'center', behavior: 'smooth' });
         }, 100);
     }
+
+
+
+
+
+    /* Function To Show Hotel Location Section For Showing Close Sale Data */
+    showHotelPaidRoomsDataFunction = function (clickedElement) {
+
+        /* Chnage Clicked Card Background Color */
+        clickedElement.style.backgroundColor = 'rgb(0, 255, 0)';
+        fanadiqindonesia_close_sale_card_id.style.backgroundColor = 'rgb(0, 162, 255)';
+
+        /* Hide And Show Different Sections Based on What Card Got Clicked */
+        document.getElementById('fanadiqindonesia_choose_hotel_location_section').style.display = 'none';
+        document.getElementById('fanadiqindonesia_choose_paid_rooms_hotel_file_section').style.display = 'flex';
+
+        /* Scroll Down To The 'fanadiqindonesia_choose_hotel_location_section' Element */
+        setTimeout(() => {
+            document.getElementById('fanadiqindonesia_choose_paid_rooms_hotel_file_section').scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }, 100);
+    }
+
+
+
 
 
     // Loop through the array to create location cards
