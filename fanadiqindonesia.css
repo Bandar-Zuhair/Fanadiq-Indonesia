@@ -322,6 +322,26 @@ header div {
     display: none;
 }
 
+.fanadiqindonesia_hotel_location_card_div {
+    background: rgb(0, 162, 255);
+    min-width: 25vw;
+    width: 25vw;
+    margin: 0 5px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0 0 3px 0.5px black;
+    transition: all 0.2s ease-in-out;
+}
+
+.fanadiqindonesia_hotel_location_card_div:hover {
+    transform: scale(1.015);
+    box-shadow: 0 0 3px 0.5px rgb(0, 255, 0);
+}
+
 .fanadiqindonesia_hotel_info_div {
     background: rgb(0, 162, 255);
     min-width: 25vw;
@@ -471,6 +491,11 @@ footer img {
         font-size: 2vw;
     }
 
+    .fanadiqindonesia_hotel_location_card_div {
+        min-width: 35vw;
+        width: 35vw;
+    }
+
     .fanadiqindonesia_hotel_info_div {
         min-width: 35vw;
         width: 35vw;
@@ -579,6 +604,11 @@ footer img {
     .fanadiqindonesia_section_title_text {
         font-size: 5vw;
         padding: 8px;
+    }
+
+    .fanadiqindonesia_hotel_location_card_div {
+        min-width: 40vw;
+        width: 40vw;
     }
 
     .fanadiqindonesia_hotel_info_div {
