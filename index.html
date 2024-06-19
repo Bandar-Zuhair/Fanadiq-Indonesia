@@ -159,7 +159,7 @@
 
         <div id="fanadiqindonesia_pdf_file_div">
 
-            <div class="fanadiqindonesia_hotel_info_div" onclick="window.open('hotel-pdf/allotment/allotment.pdf')">
+            <div class="fanadiqindonesia_hotel_info_div" onclick="showHotelAllotmentDataFunction()">
                 <div class="fanadiqindonesia_hotel_location_img_div">
                     <img src='pdf-images/pdf.jpg' alt="فنادق اندونيسيا">
                 </div>
@@ -168,12 +168,61 @@
                 </div>
             </div>
 
-            <div class="fanadiqindonesia_hotel_info_div" onclick="showHotelCloseSaleDataFunction()">
+            <div id="fanadiqindonesia_close_sale_card_id" class="fanadiqindonesia_hotel_info_div" onclick="showHotelCloseSaleDataFunction(this)">
                 <div class="fanadiqindonesia_hotel_location_img_div">
                     <img src='pdf-images/pdf.jpg' alt="فنادق اندونيسيا">
                 </div>
                 <div class="fanadiqindonesia_hotel_location_text_div">
                     <h2>Close Sale</h2>
+                </div>
+            </div>
+
+            <div id="fanadiqindonesia_paid_rooms_card_id" class="fanadiqindonesia_hotel_info_div" onclick="showHotelPaidRoomsDataFunction(this)">
+                <div class="fanadiqindonesia_hotel_location_img_div">
+                    <img src='pdf-images/pdf.jpg' alt="فنادق اندونيسيا">
+                </div>
+                <div class="fanadiqindonesia_hotel_location_text_div">
+                    <h2>Paid Rooms</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Choose Hotel Location Section -->
+    <section id="fanadiqindonesia_choose_paid_rooms_hotel_file_section" class="fanadiqindonesia_sections" style="display: none;">
+
+        <div class="fanadiqindonesia_section_title_text_div">
+            <h1 class="fanadiqindonesia_section_title_text" title="فنادق اندونيسيا">اختار الفندق</h1>
+        </div>
+
+        <div id="fanadiqindonesia_pdf_file_div">
+
+            <div class="fanadiqindonesia_hotel_info_div" onclick="window.open('hotel-pdf/paid-rooms/ulu-segara/ulu-segara.pdf')">
+                <div class="fanadiqindonesia_hotel_location_img_div">
+                    <img src='pdf-images/pdf.jpg' alt="فنادق اندونيسيا">
+                </div>
+                <div class="fanadiqindonesia_hotel_location_text_div">
+                    <h2>ULU SEGARA</h2>
+                </div>
+            </div>
+
+            <div class="fanadiqindonesia_hotel_info_div" onclick="window.open('hotel-pdf/paid-rooms/tejaprana/tejaprana.pdf')">
+                <div class="fanadiqindonesia_hotel_location_img_div">
+                    <img src='pdf-images/pdf.jpg' alt="فنادق اندونيسيا">
+                </div>
+                <div class="fanadiqindonesia_hotel_location_text_div">
+                    <h2>TEJAPRANA</h2>
                 </div>
             </div>
 
