@@ -235,6 +235,7 @@ if (document.getElementById('fanadiqindonesia_choose_pdf_file_section')) {
 
         /* Hide And Show Different Sections Based on What Card Got Clicked */
         document.getElementById('fanadiqindonesia_choose_hotel_location_section').style.display = 'none';
+        document.getElementById('fanadiqindonesia_choose_hotel_area_section').style.display = 'none';
         document.getElementById('fanadiqindonesia_choose_paid_rooms_hotel_file_section').style.display = 'flex';
 
         /* Scroll Down To The 'fanadiqindonesia_choose_hotel_location_section' Element */
